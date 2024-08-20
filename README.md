@@ -31,6 +31,8 @@ Seu objetivo é realizar o consumo desta API, seguindo o escopo abaixo:
 - Caso o usuário informe um CEP com formato ou conteúdo inválido o tratamento deverá ser realizado pela aplicação antes de realizar a consulta na API e a mensagem adequada exibida para o usuário.
 - A rotina de consulta de CEP deverá ser encapsulada em uma Classe TConsultaCEP, onde tudo que seja necessário para realizar o acesso a API esteja auto contido na classe de maneira que essa consulta de CEP possa ser utilizada numa outra tela ou até mesmo numa outra aplicação apenas instanciando a classe e chamando um método "ConsultarCEP(xxx)", que deverá encapsular o retorno dos dados também numa classe. Ex: TRetornoCEP.
 
+Todos os requisitos do escopo foram realizados.
+
 ## Adicionais 
 
 Os adicionais não são obrigatórios, mas considere implementa-los. Lembre-se de que o desafio é um "showcase" dos seus skills, então quanto mais skills você nos mostrar, mais chance terá de receber uma boa proposta.
@@ -39,7 +41,7 @@ Os adicionais não são obrigatórios, mas considere implementa-los. Lembre-se d
 - Adicional 2: Fazer um comando no programa para a cada X minutos (configurado no proprio aplicativo) consultar uma faixa de ceps (Ex: do 93336-999 ao 93336-999).. essa faixa tambem tem que ser configurada, acessar os ceps e salvar eles no banco de dados de cache de ceps ou atualizar caso já exista.  Detalhe: cuidar para não dar erro de uso indevido da api (não fazer milhares de acessos em sequencia, colocar um intervalo de tempo). Essa busca deverá ser realizada de forma que não trave a tela (em thread ou task)... e cuidar para que os erros de acesso sejam tratados e salvos em arquivo de log (não pode subir erros na tela para o usuario durante a execução automatica).. quando a task tiver em execução, colocar um aviso em tela para o usuario de que a mesma está rodando (por exemplo, num status bar) a consulta normal tem que continua funcionando durante o processamento das faixas de CEP. Colocar um botão na tela para disparar manualmente, caso o usuario não queria esperar os minutos configurados para rodar automaticamente. Cuidar para não deixar o programa disparar em duplicidade a rotina de busca de faixas (ex: se configurar para disparar a cada poucos minutos, quando chegar o tempo do novo disparo, se a execução anterior ainda tiver em andamento, tem que tratar para não ter duas rodando ao mesmo tempo, ou se o usuario clicar no botão pra disparar manualmente e ja tiver uma automatica sendo executada, tem que parar a que esta rodando ou dar uma mensagem de que ja tem um processamento em execução)
 - Adicional 3: Ao consultar um CEP, os dados retornados devem ser gravados num banco de dados (Postgres de preferencia, mas pode ser outro). Ao consultar um cep, antes de acessar a API, deverá consultar no banco e retornar do banco caso o CEP já exista. Para isso, deverá ser criado a logica de acesso banco numa classe DAO separada da classe de consulta na API (não misturar responsabilidade das classes, pois a classe TConsultaCEP deve continuar sendo possivel obter os CEPs sem que seja necessario acesso a banco de dados)
 
-Os adicionais 2 e 3 foram realizados.
+O adicional 3 foi realizado.
 
 ## Prazo: 
 O prazo deverá ser calculado pelo candidato antes de iniciar o trabalho e informado.
