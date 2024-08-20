@@ -44,4 +44,4 @@ Os adicionais 2 e 3 foram realizados.
 ## Prazo: 
 O prazo deverá ser calculado pelo candidato antes de iniciar o trabalho e informado.
 
-O projeto foi realizado em ...
+O projeto foi realizado de 20/03 à 24/03 - 5 dias.
